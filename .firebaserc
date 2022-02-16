@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "devstatus-a7562": {
+      "hosting": {
+        "Adxenon": [
+          "devstatus-a7562"
+        ]
+      }
+    }
+  }
+}

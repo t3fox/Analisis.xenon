@@ -1,0 +1,169 @@
+<form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="codestatus" *ngIf="DBStore">
+    
+    <!--LOGS -->
+    <div class="graph-cont-form">
+        <h3>Logs >> </h3>
+            <div style="padding:5px;">
+
+                <label>Logs >> </label> 
+                    <br> 
+                    <input  
+                        type="number" 
+                        placeholder="Logs Actuales"
+                        formControlName="DvLOGS"
+                        min="0" 
+                    >
+            </div>
+            <h4 style="padding:5px;"><strong>Meta Anual: 300</strong></h4>
+    </div>
+    
+    <!--GRAPH UNO -->
+    <div class="graph-cont-form">
+        <h3>Cumplimiento de Gestión de Información - Graph Uno</h3>
+            <div style="padding:5px;">
+                <strong>Vista Previa Mensual: {{DBStore[9].data.mensual}} </strong>
+                    <br>
+                    <input  
+                        type="number" 
+                        placeholder="Actual Mensual"
+                        formControlName="GPUno_MEs"
+                        min="0" 
+                    >
+            </div>
+            <h4 style="padding:5px;"><strong>Meta Anual: 300</strong></h4>
+    </div>
+     <!--GRAPH ONE -->
+    <div class="graph-cont-form">
+        <h3>Ciclos de programación realizados - Graph One | 
+            <strong>Meta Anual: 2000</strong> /  
+            Progreso: {{DBStore[4].data.anualprogress}}
+        </h3>
+        <div style="padding:5px;">
+            <label>Fecha de modificación: {{DBStore[4].data.finalup}} </label><br>
+           <ul>
+               <li><p>Progreso Anual: {{DBStore[4].data.anualprogress}} </p></li>
+               <li><span>Valor Insertado: {{DBStore[4].data.lastinput}}</span></li>
+               <li><strong>Vista Previa Mensual: {{DBStore[4].data.mensual}}% </strong></li>
+           </ul>
+        </div>
+    </div>
+     <!--GRAPH TWO -->
+    <div class="graph-cont-form">
+        <h3>Documentos Gestionados al Mes - Graph TWO</h3>
+        <div style="padding:5px;">
+            <strong>Vista Previa Mensual: {{DBStore[8].data.mensual}} </strong>
+                <br>
+                <input  
+                    type="number" 
+                    placeholder="Actual Mensual"
+                    formControlName="GPTwo_Mes"
+                    min="0"
+                >
+        </div>
+        <div style="padding:5px;">
+            <h4><strong>Meta Mensual: </strong>50</h4>
+            <h4><strong>Meta Anual: </strong>300</h4>
+        </div>
+
+    </div>
+     <!--GRAPH THREE -->
+    <div class="graph-cont-form">
+        <h3>Análisis generales realizados al mes - Graph Three</h3>
+        <div style="padding:5px;">
+            <strong>Vista Previa Mensual: {{DBStore[7].data.mensual}} </strong>
+                <br>
+                <input  
+                    type="number" 
+                    placeholder="Actual Mensual"
+                    formControlName="GPThree_Mes"
+                    min="0"
+                >
+        </div>
+
+        <div style="padding:5px;">
+            <h4><strong>Meta Mensual: </strong>40</h4>
+            <h4><strong>Meta Anual: </strong>280</h4>
+        </div>
+
+    </div>
+     <!--GRAPH FOUR -->
+    <div class="graph-cont-form">
+        <h3>Análisis de código generales realizados al mes - Graph Four</h3>
+        <div style="padding:5px;">
+            <strong>Vista Previa Mensual: {{DBStore[2].data.mensual}} </strong>
+                <br>
+                <input  
+                    type="number" 
+                    placeholder="Actual Mensual"
+                    formControlName="GPFour_Mes"
+                    min="0"
+                >
+        </div>
+        <div style="padding:5px;">
+            <h4><strong>Meta Mensual: </strong>80</h4>
+            <h4><strong>Meta Anual: </strong>560</h4>
+        </div>
+
+    </div>
+     <!--GRAPH FIVE -->
+    <div class="graph-cont-form">
+        <h3>Diseños de interfaz, estructura o multimedia al mes - Graph Five</h3>
+        <div style="padding:5px;">
+            <strong>Vista Previa Mensual: {{DBStore[1].data.mensual}} </strong>
+                <br>
+                <input  
+                    type="number" 
+                    placeholder="Actual Mensual"
+                    formControlName="GPFive_Mes"
+                    min="0"
+                >
+        </div>
+        <div style="padding:5px;">
+            <h4><strong>Meta Mensual: </strong>80</h4>
+            <h4><strong>Meta Anual: </strong>560</h4>
+        </div>
+    </div>
+     <!--GRAPH SIX -->
+    <div class="graph-cont-form">
+        <h3>Ejecuciones de desarrollo realizadas al mes - Graph Six</h3>
+        <div style="padding:5px;">
+            <strong>Meta Anual: 6000</strong><br>
+            <strong>Meta Mensual: 1000</strong>
+                <p>Vista previa actual: {{DBStore[6].data.mensual}}% </p>
+        </div>
+        
+    </div>
+     <!--GRAPH SEVEN -->
+    <div class="graph-cont-form">
+        <h3>Tests realizados al mes - Graph Seven</h3>
+        <div style="padding:5px;">
+            <strong>Meta Anual: 500</strong><br>
+            <strong>Meta Mensual: 3000</strong>
+                <p>Vista previa actual: {{DBStore[5].data.mensual}}% </p>
+        </div>
+    </div>
+     <!--GRAPH EIGHT -->
+    <div class="graph-cont-form">
+        <h3>Correcciones de Bugs al mes - Graph Eight</h3>
+        <div style="padding:5px;">
+            <strong>Meta Anual: 200</strong><br>
+            <strong>Meta Mensual: 12000</strong>
+                <p>Vista previa actual: {{DBStore[0].data.mensual}}% </p>
+        </div>
+    </div>
+     <!--GRAPH NINE -->
+    <div class="graph-cont-form">
+        <h3>Implementaciones realizadas al mes - Graph Nine</h3>
+        <div style="padding:5px;">
+            <strong>Meta Anual: 500</strong><br>
+            <strong>Meta Mensual: 3000</strong>
+                <p>Vista previa actual: {{DBStore[3].data.mensual}}% </p>
+        </div>
+
+    </div>
+    <div style="padding:5px;">
+        <button type="submit">
+                ACTUALIZAR
+        </button>
+    </div>
+</form>

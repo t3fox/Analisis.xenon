@@ -1,0 +1,81 @@
+ 
+        <div class="justify-content-center content-graph row">
+            <h2 class="panel-heading">
+                {{tablettle}}
+            </h2>
+            <p class="text-medium">{{cardtxt}}: Anual - 300</p>
+
+
+            <!-- CONTADOR -->
+            <div class="col-sm-6 graph-1">
+                <div class="xe-widget xe-counter" data-count=".num" data-duration="2">
+                    <div class="xe-icon">
+                        <i class="linecons-cloud"></i>
+                    </div>
+                    <div class="xe-label" >
+                        <strong class="num" [countUp]="DBStore[9].mensual">0</strong>
+                        <!-- <span>{{DBStore[9].finalup}} | </span> -->
+                        <br>
+                        <span>Progreso Mensual Actual: {{DBStore[9].anual_porcent}} %</span>
+                    </div>
+                </div>  
+            </div>
+            <!-- VELOCIMETRO --> 
+            <div class="col-sm-6 graph-2">
+                <dx-circular-gauge    
+                    id="gauge" 
+                    [value]="DBStore[9].anual_porcent"
+                    [subvalues]="DBStore[9].anual_porcent">
+                    <dxo-value-indicator [offset]="15" color="#000"></dxo-value-indicator>
+                    <dxo-tooltip 
+                        [enabled]="true">
+                        <dxo-font
+                            color="#000"
+                            [size]="14">
+                        </dxo-font>
+                    </dxo-tooltip>
+                    <dxo-scale
+                        [startValue]="0"
+                        [endValue]="100"
+                        [tickInterval]="33">
+                        <dxo-tick color="#68b828"></dxo-tick>
+                        <dxo-label [indentFromTick]="1"></dxo-label>
+                    </dxo-scale>
+                    <dxo-range-container [offset]="5">
+                        <dxi-range [startValue]="0"   [endValue]="33" color="#cc3f45"></dxi-range>
+                        <dxi-range [startValue]="33"  [endValue]="66" color="#fcba00"></dxi-range>
+                        <dxi-range [startValue]="67" [endValue]="100" color="#68b828"></dxi-range>
+                        
+                    </dxo-range-container>
+                    <dxo-title text="">
+                        <dxo-font [size]="10"></dxo-font>
+                    </dxo-title>
+                </dx-circular-gauge>
+            </div>
+
+            <!-- GRAFICA -->
+            <div class="col-sm-12 graph-3">
+                <dx-chart
+                    [dataSource]="populationData"
+                    style="height: 27rem; width:105%;">
+                    <dxi-series valueField="y1564" name="mes" color="green"></dxi-series>
+                    
+                    <dxo-common-series-settings
+                        #commonSeries
+                        argumentField="fecha"
+                        [type]="types[1]">
+                    </dxo-common-series-settings> 
+                    <dxo-margin [bottom]="20"></dxo-margin>
+                    <dxo-argument-axis [valueMarginsEnabled]="false">
+                    </dxo-argument-axis>
+                    <dxo-legend
+                        verticalAlignment="bottom"
+                        horizontalAlignment="center">
+                    </dxo-legend>
+                </dx-chart>
+            </div>
+
+        </div>
+    
+   
+   

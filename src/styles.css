@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+.graph {
+    background-color:#fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 14px 0px #0000000a;
+    margin-bottom: 3rem;
+}
+
+::ng-deep #gauge {
+    height: 200px;
+    width:70%;
+
+}
+
+svg.dxg.dxg-circular-gauge {
+    transform: scale(.8);
+    margin-top: -5rem;
+}
+
+body {
+    background-color: #f2f2f2!important;
+}
+
+.graph-3 {
+    transform: scale(.85);
+    margin-right: -1rem;
+    
+}
+.graph-1, .graph-2 {
+    height: 120px!important;
+    margin-top: 1.5rem!important;
+}
+.graph-2 , .graph-1{
+    display: flex;
+    justify-content: center;
+}
+
+h2.panel-heading {
+    font-family: montserrat;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 2.5rem 3rem 0.5rem;
+    text-align: center;
+}
+
+p.text-medium {
+    margin-bottom: 0;
+    text-align: center;
+}
+dx-chart.dx-visibility-change-handler {
+    max-height: 22rem!important;
+}
+
+h1.titleP {
+    font-family: montserrat;
+    text-align: center;
+    margin-bottom: 3rem!important;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.content-graph {
+    height: 400px;
+}
+.description {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+    
+.description h6 {
+    font-size: 1.3rem;
+}
+.description span {
+    color: #fc7979;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+  
